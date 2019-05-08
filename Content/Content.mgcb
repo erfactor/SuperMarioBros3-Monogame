@@ -1,0 +1,965 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/platform:Windows
+/config:
+/profile:Reach
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+
+#---------------------------------- Content ---------------------------------#
+
+#begin big mario.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:big mario.png
+
+#begin bullet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:bullet.png
+
+#begin coin.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:coin.png
+
+#begin File.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:File.spritefont
+
+#begin Images/background.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/background.png
+
+#begin Images/block1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/block1.png
+
+#begin Images/block2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/block2.png
+
+#begin Images/block3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/block3.png
+
+#begin Images/cloud_anim.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/cloud_anim.png
+
+#begin Images/CoinSpark.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/CoinSpark.png
+
+#begin Images/EpicTomekWork.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/EpicTomekWork.png
+
+#begin Images/feather.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/feather.png
+
+#begin Images/fireball.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/fireball.png
+
+#begin Images/flower.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/flower.png
+
+#begin Images/map1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/map1.png
+
+#begin Images/mapmario.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/mapmario.png
+
+#begin Images/MapScreenTile.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/MapScreenTile.png
+
+#begin Images/marioanims.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/marioanims.png
+
+#begin Images/pyramid_background.PNG
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/pyramid_background.PNG
+
+#begin Images/sky_background.PNG
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/sky_background.PNG
+
+#begin Images/speedbar.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/speedbar.png
+
+#begin level_icons.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:level_icons.png
+
+#begin Mario Songs/A.World.of.Darkness.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/A.World.of.Darkness.mp3
+
+#begin Mario Songs/A.World.of.Pipes.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/A.World.of.Pipes.mp3
+
+#begin Mario Songs/Airship.Completed.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Airship.Completed.mp3
+
+#begin Mario Songs/Boom.Boom.Defeated.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Boom.Boom.Defeated.mp3
+
+#begin Mario Songs/Bowser.Defeated.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Bowser.Defeated.mp3
+
+#begin Mario Songs/Desert.Land.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Desert.Land.mp3
+
+#begin Mario Songs/Game.Over.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Game.Over.mp3
+
+#begin Mario Songs/Giants.World.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Giants.World.mp3
+
+#begin Mario Songs/Go.to.Sleep.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Go.to.Sleep.mp3
+
+#begin Mario Songs/Grass.Land.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Grass.Land.mp3
+
+#begin Mario Songs/Hurry.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Hurry.mp3
+
+#begin Mario Songs/Ice.Everywhere.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Ice.Everywhere.mp3
+
+#begin Mario Songs/Invincible.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Invincible.mp3
+
+#begin Mario Songs/Its.Bowser.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Its.Bowser.mp3
+
+#begin Mario Songs/Level.Completed.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Level.Completed.mp3
+
+#begin Mario Songs/Running.Around.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Running.Around.mp3
+
+#begin Mario Songs/Running.Around.Underground.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Running.Around.Underground.mp3
+
+#begin Mario Songs/Saving.the.King.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Saving.the.King.mp3
+
+#begin Mario Songs/Select.an.Item.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Select.an.Item.mp3
+
+#begin Mario Songs/Still.Running.Around.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Still.Running.Around.mp3
+
+#begin Mario Songs/Swimming.in.the.Calm.Water.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Swimming.in.the.Calm.Water.mp3
+
+#begin Mario Songs/The.Airship.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/The.Airship.mp3
+
+#begin Mario Songs/The.Castle.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/The.Castle.mp3
+
+#begin Mario Songs/The.Hammer.Bros.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/The.Hammer.Bros.mp3
+
+#begin Mario Songs/The.Princess.is.Saved.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/The.Princess.is.Saved.mp3
+
+#begin Mario Songs/The.World.in.the.Sky.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/The.World.in.the.Sky.mp3
+
+#begin Mario Songs/Thinking.Really.Hard.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Thinking.Really.Hard.mp3
+
+#begin Mario Songs/Unexpected.Encounter.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Unexpected.Encounter.mp3
+
+#begin Mario Songs/Up.Above.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Up.Above.mp3
+
+#begin Mario Songs/Warp.Whistle.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Warp.Whistle.mp3
+
+#begin Mario Songs/Water.World.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/Water.World.mp3
+
+#begin Mario Songs/You.have.died.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mario Songs/You.have.died.mp3
+
+#begin mario.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:mario.png
+
+#begin mario2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:mario2.png
+
+#begin MarioAnimations.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:MarioAnimations.png
+
+#begin nicetile.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:nicetile.png
+
+#begin plant.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:plant.png
+
+#begin Score.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Score.spritefont
+
+#begin shaders/barrel.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:shaders/barrel.fx
+
+#begin shaders/circle.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:shaders/circle.fx
+
+#begin shaders/fade.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:shaders/fade.fx
+
+#begin shaders/hypno.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:shaders/hypno.fx
+
+#begin shaders/linear.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:shaders/linear.fx
+
+#begin shaders/water.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:shaders/water.fx
+
+#begin sheep.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:sheep.png
+
+#begin Shroom.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Shroom.png
+
+#begin StageTiles.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:StageTiles.png
+
+#begin Super Mario Bros 3 Real NES Sound Effects/1-Up SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/1-Up SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Beanstalk SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Beanstalk SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Boomerang Brothers Boomerang SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Boomerang Brothers Boomerang SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Boomerang Brothers Boomerang V2 SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Boomerang Brothers Boomerang V2 SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Bowser Falling SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Bowser Falling SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Bowser's Flame Ball SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Bowser's Flame Ball SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Bowser's Statues Laser Beam SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Bowser's Statues Laser Beam SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Breaking Blocks SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Breaking Blocks SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Bump V1 SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Bump V1 SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Bump V2 SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Bump V2 SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Card Match Success SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Card Match Success SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Choosing a Card SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Choosing a Card SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Coin Obtained SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Coin Obtained SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Downed SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Downed SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Dry Bones Shattered SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Dry Bones Shattered SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Entering a New Land SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Entering a New Land SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Explosion SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Explosion SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Flame Ball SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Flame Ball SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Flames SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Flames SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Froggy Hop SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Froggy Hop SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Hammer Brothers Steps SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Hammer Brothers Steps SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Hammer Mario's Hammer SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Hammer Mario's Hammer SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Invincable Heroes SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Invincable Heroes SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Jumping SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Jumping SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Level Card Flipped SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Level Card Flipped SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Level Chest Opened SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Level Chest Opened SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Level Timer Points SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Level Timer Points SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Moving SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Moving SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Mushroom Obtained SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Mushroom Obtained SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Palace Crumbles SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Palace Crumbles SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Pausing SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Pausing SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Pipe Maze SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Pipe Maze SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Raccoon Leaf Obtained SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Raccoon Leaf Obtained SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Raccoon Tail Whip SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Raccoon Tail Whip SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Running SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Running SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Shell SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Shell SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Slipping on Ice SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Slipping on Ice SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Slipping SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Slipping SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Squish SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Squish SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Stage Selected SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Stage Selected SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Suit Loss (Japanese) SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Suit Loss (Japanese) SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Text SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Text SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/The Doom Ship SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/The Doom Ship SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Wand Obtained SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Wand Obtained SFX.wav
+
+#begin Super Mario Bros 3 Real NES Sound Effects/Wrong Card Match SFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Super Mario Bros 3 Real NES Sound Effects/Wrong Card Match SFX.wav
+
+#begin Theme Song.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Theme Song.mp3
+
+#begin Touch a star/star1.PNG
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Touch a star/star1.PNG
+
+#begin Touch a star/star2.PNG
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Touch a star/star2.PNG
+
+#begin TurtleAnimations.bmp
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TurtleAnimations.bmp
+
+#begin TurtleAnimations2.bmp
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TurtleAnimations2.bmp
+
+#begin TurtleAnimations3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TurtleAnimations3.png
+
+#begin walker1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:walker1.png
+
+#begin walker2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:walker2.png
+
