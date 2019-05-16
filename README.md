@@ -2,7 +2,8 @@
 A recreation of original Super Mario Bros 3 made in Monogame, working almost identically as original. I've made a few minor changes, and obviously I wasn't able to make all levels. 
 
 In order to play simply go to Release section, download zip and open shortcut contained here.
-If you want to explore code and make some changes, download all files, and load "SuperMarioBros.sln" into Visual Studio. 
+
+If you want to explore code and make some changes, download all files, and load "SuperMarioBros.sln" into Visual Studio. You probably need to have Monogame installed on your PC.
 # Screenshots
 ![alt text](https://github.com/Staccator/SuperMarioBros3-Monogame/blob/master/Screenshots/startlevdie.gif)
 ![alt text](https://github.com/Staccator/SuperMarioBros3-Monogame/blob/master/Screenshots/pipe.gif)
