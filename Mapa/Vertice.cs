@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-
-namespace SuperMarioBros
+﻿namespace SuperMarioBros
 {
     public class Vertex
     {
@@ -28,5 +20,5 @@ namespace SuperMarioBros
             else MainView.SwitchMode(action);
         }
     }
-    
+
 }
