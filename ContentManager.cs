@@ -1,13 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
 using static SuperMarioBros.ContentManager;
 
 namespace SuperMarioBros
@@ -132,7 +125,7 @@ namespace SuperMarioBros
             texture.GetData<Color>(colorsTab, 0, colorsTab.Length);
             for (int i = 0; i < texture.Width; i++)
             {
-                for (int j = 0; j < texture.Height/2; j++)
+                for (int j = 0; j < texture.Height / 2; j++)
                 {
                     int a = j * texture.Width + i;
                     int b = (texture.Height - 1 - j) * texture.Width + i;
@@ -184,7 +177,7 @@ namespace SuperMarioBros
         public static Texture2D ProperPipe(int width, int height)
         {
             int ia = rnd.Next(2) == 0 ? 0 : 4;
-            int j = 2+ 2*rnd.Next(6);
+            int j = 2 + 2 * rnd.Next(6);
 
             Texture2D result = new Texture2D(ContentManager.game.GraphicsDevice, width * 32, height * 32);
             ////////////////
@@ -193,12 +186,12 @@ namespace SuperMarioBros
             Texture2D BotLeft = TopLeft.FlipTextureVertically();
             Texture2D BotRight = TopRight.FlipTextureVertically();
             /////////////////////////
-            Texture2D Left = tilesTextures[ia, j+1];
-            Texture2D Right = tilesTextures[ia + 1, j+1];
+            Texture2D Left = tilesTextures[ia, j + 1];
+            Texture2D Right = tilesTextures[ia + 1, j + 1];
 
             for (int i = 1; i < height - 1; i++) result.SetTexture(Right, new Rectangle((width - 1) * 32, 32 * i, 32, 32));
             for (int i = 1; i < height - 1; i++) result.SetTexture(Left, new Rectangle(0, 32 * i, 32, 32));
-            
+
             result.SetTexture(TopLeft, new Rectangle(0, 0, 32, 32));
             result.SetTexture(TopRight, new Rectangle((width - 1) * 32, 0, 32, 32));
             result.SetTexture(BotLeft, new Rectangle(0, (height - 1) * 32, 32, 32));
@@ -216,30 +209,30 @@ namespace SuperMarioBros
             Texture2D BotLeft = tilesTextures[42, 1];
             Texture2D BotRight = tilesTextures[44, 1];
             /////////////////////////
-            Texture2D Top = tilesTextures[43,0];
-            Texture2D Bot = tilesTextures[43,1];
+            Texture2D Top = tilesTextures[43, 0];
+            Texture2D Bot = tilesTextures[43, 1];
 
-            for (int i = 0; i < width; i++) result.SetTexture(Top, new Rectangle((i + 1) * 32,  0, 32, 32));
+            for (int i = 0; i < width; i++) result.SetTexture(Top, new Rectangle((i + 1) * 32, 0, 32, 32));
             for (int i = 0; i < width; i++) result.SetTexture(Bot, new Rectangle((i + 1) * 32, 32, 32, 32));
 
             result.SetTexture(TopLeft, new Rectangle(0, 0, 32, 32));
             result.SetTexture(TopRight, new Rectangle((width + 1) * 32, 0, 32, 32));
             result.SetTexture(BotLeft, new Rectangle(0, 32, 32, 32));
-            result.SetTexture(BotRight, new Rectangle((width + 1) * 32,  32, 32, 32));
+            result.SetTexture(BotRight, new Rectangle((width + 1) * 32, 32, 32, 32));
 
             return result;
         }
 
-        public static Texture2D GetTextureRectangleFromTable(Texture2D[,] Textures,int x1,int y1,int x2,int y2)
+        public static Texture2D GetTextureRectangleFromTable(Texture2D[,] Textures, int x1, int y1, int x2, int y2)
         {
             int width = (x2 - x1 + 1) * 32;
             int height = (y2 - y1 + 1) * 32;
             Texture2D result = new Texture2D(ContentManager.game.GraphicsDevice, (int)width, (int)height);
 
-            for(int i = x1; i <= x2; i++)
-            for(int j = y1; j <= y2; j++)
+            for (int i = x1; i <= x2; i++)
+                for (int j = y1; j <= y2; j++)
                 {
-                    result.SetTexture(Textures[i, j], new Rectangle((i - x1)*32, (j - y1)*32, 32, 32));
+                    result.SetTexture(Textures[i, j], new Rectangle((i - x1) * 32, (j - y1) * 32, 32, 32));
                 }
 
             return result;

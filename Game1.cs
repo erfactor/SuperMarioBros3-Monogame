@@ -1,17 +1,5 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.Media;
-using System;
+﻿using System;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static SuperMarioBros.ContentManager;
-using static SuperMarioBros.CollisionDetector;
-using static SuperMarioBros.MainView;
 namespace SuperMarioBros
 {
     public class Game1 : Game
@@ -31,7 +19,7 @@ namespace SuperMarioBros
         public static Level level3 = new Level(goback + "1.3.png");
         public static Level level4 = new Level(goback + "1.4.png");
         Map map;
-        
+
 
         public Game1()
         {
@@ -39,7 +27,7 @@ namespace SuperMarioBros
             graphics.GraphicsProfile = GraphicsProfile.HiDef;
             Content.RootDirectory = "Content";
         }
-        
+
         protected override void Initialize()
         {
             ContentManager.Initialize(this);
@@ -69,10 +57,10 @@ namespace SuperMarioBros
         {
             /*                   Load Content Begin          */
             LoadTextures(("mario", "MarioAnimations"), ("floor", "nicetile"), ("mushroom", "Shroom"), ("turtle1", "TurtleAnimations"), ("turtle2", "TurtleAnimations2"), ("turtle3", "TurtleAnimations3"), ("plant", "plant"), ("walker1", "walker1"), ("walker2", "walker2"));
-            LoadTextures(("bullet", "bullet"), ("big mario","big mario") , ("coin", "coin") , ("stagetiles","StageTiles"),("level_icons","level_icons"),("star1", "Touch a star/star1"), ("star2", "Touch a star/star2"));
-            LoadTextures(("feather", "Images/feather") , ("raccoon","Images/marioanims") , ("block1", "Images/block1") , ("block2", "Images/block2") , ("block3", "Images/block3"),("speedbar","Images/speedbar"));
-            LoadTextures( ("background", "Images/background"), ("pyramid_background", "Images/pyramid_background"), ("sky_background", "Images/sky_background"),("mapTile","Images/MapScreenTile"));
-            LoadTextures(("FullAnims", "Images/EpicTomekWork"),("map1","Images/map1"), ("mapmario", "Images/mapmario"),("sparkle", "Images/CoinSpark"),("fireball","Images/fireball"),("cloud_anim", "Images/cloud_anim"),("flower","Images/flower"));
+            LoadTextures(("bullet", "bullet"), ("big mario", "big mario"), ("coin", "coin"), ("stagetiles", "StageTiles"), ("level_icons", "level_icons"), ("star1", "Touch a star/star1"), ("star2", "Touch a star/star2"));
+            LoadTextures(("feather", "Images/feather"), ("raccoon", "Images/marioanims"), ("block1", "Images/block1"), ("block2", "Images/block2"), ("block3", "Images/block3"), ("speedbar", "Images/speedbar"));
+            LoadTextures(("background", "Images/background"), ("pyramid_background", "Images/pyramid_background"), ("sky_background", "Images/sky_background"), ("mapTile", "Images/MapScreenTile"));
+            LoadTextures(("FullAnims", "Images/EpicTomekWork"), ("map1", "Images/map1"), ("mapmario", "Images/mapmario"), ("sparkle", "Images/CoinSpark"), ("fireball", "Images/fireball"), ("cloud_anim", "Images/cloud_anim"), ("flower", "Images/flower"));
             LoadSoundEffects(("jumpSound", "Super Mario Bros 3 Real NES Sound Effects/Bump V1 SFX"));
             LoadSoundEffects(("jumpxs", "Super Mario Bros 3 Real NES Sound Effects/1-Up SFX"));
             LoadSoundEffects(("coin", "Super Mario Bros 3 Real NES Sound Effects/Coin Obtained SFX"));
@@ -85,14 +73,14 @@ namespace SuperMarioBros
             /*                   Load Content End           */
             MediaPlayer.IsRepeating = true;
             MediaPlayer.Play(GetRandomSong());
-            level1.LoadLevel(level1.file_name,Textures["background"],Songs["Running.Around"]);
+            level1.LoadLevel(level1.file_name, Textures["background"], Songs["Running.Around"]);
             level2.LoadLevel(level2.file_name, Textures["pyramid_background"], Songs["Grass.Land"]);
             level3.LoadLevel(level3.file_name, Textures["background"], Songs["The.World.in.the.Sky"]);
             level4.LoadLevel(level4.file_name, Textures["sky_background"], Songs["Up.Above"]);
             MainView.SwitchMode(Mode.main_screen);
 
         }
-        protected override void UnloadContent(){}
+        protected override void UnloadContent() { }
 
         Random rnd = new Random((int)System.DateTime.UtcNow.TimeOfDay.TotalSeconds);
         float accumulator = 0;
@@ -103,9 +91,9 @@ namespace SuperMarioBros
             //if (MediaPlayer.State == MediaState.Stopped) MediaPlayer.Play(Songs.Values.ElementAt(rnd.Next() % Songs.Count()));
 
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                SwitchMode(Mode.main_screen);                    
+                SwitchMode(Mode.main_screen);
 
-            if(MainView.CurrentMode is Level level)
+            if (MainView.CurrentMode is Level level)
             {
                 if (!level.scene.player.alive)
                 {
@@ -114,7 +102,8 @@ namespace SuperMarioBros
                         renderer.hypnoactive = true; renderer.ResetHypnoShader(); hypnose = true; GameActive = false;
                         MediaPlayer.Play(Songs["You.have.died"]);
                     }
-                    if (!renderer.hypnoactive & hypnose) {
+                    if (!renderer.hypnoactive & hypnose)
+                    {
                         hypnose = false;
                         GameActive = true;
                         Map.ResetFade();
@@ -129,13 +118,13 @@ namespace SuperMarioBros
                 {
                     if (!hypnose)
                     {
-                        renderer.hypnoactive = true;renderer.ResetHypnoShader(); hypnose = true; GameActive = false;
+                        renderer.hypnoactive = true; renderer.ResetHypnoShader(); hypnose = true; GameActive = false;
                         MediaPlayer.Play(Songs["Level.Completed"]);
                     }
                     if (!renderer.hypnoactive & hypnose) { hypnose = false; SwitchMode(Mode.map); GameActive = true; Map.ResetFade(); }
                 }
             }
-           // Console.WriteLine(hypnose + "   "+ renderer.hypnoactive);
+            // Console.WriteLine(hypnose + "   "+ renderer.hypnoactive);
             if (Keyboard.GetState().IsKeyDown(Keys.Q))
             {
                 SwitchMode(Mode.textures);
@@ -233,6 +222,6 @@ namespace SuperMarioBros
                 LoadSoundEffects((str2, "Super Mario Bros 3 Real NES Sound Effects/" + str1));
             }
         }
-      
+
     }
 }
