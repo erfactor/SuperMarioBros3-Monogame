@@ -1,12 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using static SuperMarioBros.Animations;
 
 namespace SuperMarioBros
 {
@@ -62,7 +56,7 @@ namespace SuperMarioBros
         private static Map UniqueMap = null;
         public static Map GetMap()
         {
-            if(UniqueMap == null)
+            if (UniqueMap == null)
             {
                 UniqueMap = new Map();
             }
@@ -112,14 +106,14 @@ namespace SuperMarioBros
             CurrentVertex = Vertices.Single(v => v.position == playerPosition);
         }
 
-        
+
         void ViewMode.Update(ref float accumulator)
         {
             GetInput();
             if (moving)
             {
                 velocity = CurrentVertex.position - LastVertex.position;
-                if((playerPosition-CurrentVertex.position).Length() <= 3f)
+                if ((playerPosition - CurrentVertex.position).Length() <= 3f)
                 {
                     playerPosition = CurrentVertex.position;
                     moving = false;
@@ -188,17 +182,17 @@ namespace SuperMarioBros
         float leftfoot;
         Vector2 scl = new Vector2(1.5f, 1.5f);
 
-        
+
         void ViewMode.Draw()
         {
             graphics.GraphicsDevice.SetRenderTarget(iter.Current);
             graphics.GraphicsDevice.Clear(Color.Azure);
             sprite.Begin();
-            sprite.Draw(texture ,new Vector2(),scale:scl);
-            if(leftfoot++ % 20 < 10)
-            sprite.Draw(texture:ContentManager.Textures["mapmario"], position:playerPosition*scl ,scale:scl);
-            else sprite.Draw(texture:ContentManager.Textures["mapmario"], position:playerPosition*scl ,scale:scl, effects:SpriteEffects.FlipHorizontally);
-            
+            sprite.Draw(texture, new Vector2(), scale: scl);
+            if (leftfoot++ % 20 < 10)
+                sprite.Draw(texture: ContentManager.Textures["mapmario"], position: playerPosition * scl, scale: scl);
+            else sprite.Draw(texture: ContentManager.Textures["mapmario"], position: playerPosition * scl, scale: scl, effects: SpriteEffects.FlipHorizontally);
+
             sprite.End();
             iter.MoveNext();
             ApplyPostEffects();
