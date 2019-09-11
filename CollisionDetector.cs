@@ -1,10 +1,6 @@
-﻿using Microsoft.Xna.Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework.Media;
 
 namespace SuperMarioBros
 {
@@ -25,10 +21,11 @@ namespace SuperMarioBros
             {
 
                 Rectangle dmgrRect = damager.GetRect;
-                foreach (var damaged in scene.enemiesToUpdate.Where(e=>e.collidable).OfType<IDamaged>().Where(d => !d.Equals(damager)))
+                foreach (var damaged in scene.enemiesToUpdate.Where(e => e.collidable).OfType<IDamaged>().Where(d => !d.Equals(damager)))
                 {
                     Rectangle dmgdRect = damaged.GetRect;
-                    if (isIntersect(dmgrRect, dmgdRect)) {
+                    if (isIntersect(dmgrRect, dmgdRect))
+                    {
                         damaged.GetDamaged();
                         if (damager is FireBall fire)
                         {
@@ -51,10 +48,10 @@ namespace SuperMarioBros
             if (!m.collisionX && !m.collisionYbot && !m.collisionYtop)
             {
                 Rectangle mobrectangle = m.rectangle;
-                if(m is Turtle)
+                if (m is Turtle)
                 {
                     mobrectangle.X += turtlediff;
-                    mobrectangle.width -= turtlediff*2;
+                    mobrectangle.width -= turtlediff * 2;
                 }
                 Vector2 mobcenter = mobrectangle.center();
                 Vector2 offset = new Vector2(m.velocityX * deltaTime, m.velocityY * deltaTime);
@@ -93,18 +90,18 @@ namespace SuperMarioBros
                 m.collisionX = foundCollisionSide;
 
             }
-            if (m.collisionYbot && !(m is Plant)&& !(m is Platform) && minDistance < 64 && minDistance > -16)
+            if (m.collisionYbot && !(m is Plant) && !(m is Platform) && minDistance < 64 && minDistance > -16)
             {
                 m.rectangle.Y += minDistance;
                 if (m is Player p)
                 {
-                    if(p.collidable)
-                    p.TextureRect.Y += minDistance;
+                    if (p.collidable)
+                        p.TextureRect.Y += minDistance;
                 }
             }
 
         }
-        
+
         public void DetectCollisions(float deltaTime)
         {
             foreach (var m in scene.mobsToUpdate)
@@ -199,7 +196,7 @@ namespace SuperMarioBros
         private void checkCollisionX(Mob m, List<Tile> tiles, float deltaTime)
         {
             Rectangle futureRectX = new Rectangle(m.rectangle.X + deltaTime * m.velocityX, m.rectangle.Y + 1f, m.rectangle.width, m.rectangle.height - 2f);
-            
+
             foreach (var t in tiles)
             {
                 if (isIntersect(futureRectX, t.rectangle))
@@ -212,7 +209,7 @@ namespace SuperMarioBros
                         else p.onleft = false;
 
                     m.collisionX = true;
-                    if(t is DestroyableTile destroyable &&(( m is Turtle turtle && turtle.state == TurtleState.roll) || m is SimpleDamage))
+                    if (t is DestroyableTile destroyable && ((m is Turtle turtle && turtle.state == TurtleState.roll) || m is SimpleDamage))
                     {
                         destroyable.Destroy();
                     }
@@ -248,15 +245,15 @@ namespace SuperMarioBros
             if (m is Turtle)
             {
                 futureRectY.X += turtlediff;
-                futureRectY.width -= turtlediff*2;
+                futureRectY.width -= turtlediff * 2;
             }
             if (m.velocityY >= 0)
                 foreach (var t in tiles)
                 {
                     if (isIntersect(futureRectY, t.rectangle))
                     {
-                        if (m is Player p && p.collidable && t is IHittableFromTop hittable) {  p.onpipe = true; hittable.GetHit(); }
-                        
+                        if (m is Player p && p.collidable && t is IHittableFromTop hittable) { p.onpipe = true; hittable.GetHit(); }
+
                         float dist = t.rectangle.Y - m.rectangle.height - m.rectangle.Y;
                         if (dist < minDistance) minDistance = dist;
                         m.collisionYbot = true; return;
